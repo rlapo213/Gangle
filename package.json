@@ -1,8 +1,8 @@
 {
-  "name": "vue-phaser3",
+  "name": "gangle",
   "version": "2.1.1",
-  "description": "Template for working with Phaser 3 in a Vue project",
-  "author": "Markus Appel <markospoparkos@gmail.com>",
+  "description": "running Game",
+  "author": "JaeHyun Kim <carbitna03@gmail.com>",
   "scripts": {
     "serve": "serve dist",
     "build": "vue-cli-service build --modern",
@@ -21,15 +21,8 @@
     "serve": "^11.3.0",
     "vue-template-compiler": "^2.6.11"
   },
-  "keywords": [
-    "vue",
-    "phaser",
-    "webpack",
-    "boilerplate"
-  ],
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sun0fABeach/vue-phaser3.git"
+    "url": "https://github.com/rlapo213/Gangle.git"
   }
 }
