@@ -1,3 +1,5 @@
+import Phaser from 'phaser'
+
 var game = new Phaser.Game(1200, 675, Phaser.CANVAS, "GameDiv");
 var text;
 var score;
