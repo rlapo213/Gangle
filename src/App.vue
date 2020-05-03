@@ -7,7 +7,9 @@
 import Game from '@/components/Game'
 export default {
   name: 'App',
-  components: { Game }
+  components: { 
+    Game 
+  }
 }
 </script>
 
