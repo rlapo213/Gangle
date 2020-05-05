@@ -1,3 +1,5 @@
+import { Scene } from 'phaser'
+
 var End = {
   create: function () {
     //CANVAS SIZE = 1200 675
