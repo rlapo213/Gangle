@@ -1,8 +1,34 @@
 import Phaser from 'phaser'
-import BootScene from './st'
+import BootScene from './Boot'
 import PlayScene from './main'
-import EndScene from './end'
+import GangleScene from './GangleScene'
+import RankingScene from './Ranking'
+import DeadScene from './Dead'
 
+//Gangle -> Boot -> Play -> Dead -> Ranking
+
+
+function launch(containerId) {
+    return new Phaser.Game({
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      parent: containerId,
+      physics: {
+        default: 'arcade',
+        arcade: {
+          gravity: {
+             y: 300 
+            },
+          debug: false
+        }
+      },
+      scene: [BootScene, PlayScene, GangleScene, RankingScene, DeadScene]
+    })
+  }
+  
+  export default launch
+  export { launch }
 
 var game = new Phaser.Game(1200, 675, Phaser.CANVAS, "GameDiv");
 var text;

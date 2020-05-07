@@ -1,9 +1,9 @@
 import { Scene } from 'phaser'
 
 
-export default class PlayScene extends Scene {
+export default class DeadScene extends Scene {
   constructor () {
-    super({ key: 'PlayScene' })
+    super({ key: 'DeadScene' })
   }
 
   create () {

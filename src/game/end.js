@@ -1,4 +1,4 @@
-import { Scene } from 'phaser'
+
 
 var End = {
   create: function () {
