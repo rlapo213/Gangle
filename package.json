@@ -1,7 +1,7 @@
 {
   "name": "gangle",
   "version": "2.1.1",
-  "description": "running Game",
+  "description": "Running Game",
   "author": "JaeHyun Kim <carbitna03@gmail.com>",
   "scripts": {
     "serve": "serve dist",

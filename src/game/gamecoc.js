@@ -1,11 +1,8 @@
 import Phaser from 'phaser'
 import BootScene from './Boot'
-import PlayScene from './main'
-import GangleScene from './GangleScene'
-import RankingScene from './Ranking'
-import DeadScene from './Dead'
+import PlayScene from './Play'
 
-//Gangle -> Boot -> Play -> Dead -> Ranking
+//Gangle.vue -> Boot.js -> Play.js -> DeadSecne.vue -> Ranking.vue
 
 
 function launch(containerId) {
@@ -23,7 +20,7 @@ function launch(containerId) {
           debug: false
         }
       },
-      scene: [BootScene, PlayScene, GangleScene, RankingScene, DeadScene]
+      scene: [BootScene, PlayScene]
     })
   }
   
