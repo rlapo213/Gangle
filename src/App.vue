@@ -1,8 +1,8 @@
 <template>
-<div>
-<Game/>
-<Gangle/>
-<Ranking/>
+  <div>
+    <Game/>
+    <Gangle/>
+    <Ranking/>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   data(){
     return{
-      a:1
+      a:0
     }
   }
 }

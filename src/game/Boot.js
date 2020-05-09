@@ -1,8 +1,4 @@
 import { Scene } from 'phaser'
-import sky from '@/game/assets/sky.png'
-import bomb from '@/game/assets/bomb.png'
-import thudMp3 from '@/game/assets/thud.mp3'
-import thudOgg from '@/game/assets/thud.ogg'
 
 
 export default class BootScene extends Scene {
@@ -24,12 +20,15 @@ export default class BootScene extends Scene {
     this.load.image("NoCard", "./assets/NoCard.png");
     this.load.audio("bgm", "./assets/SEIS_LAVEY.wav");
     this.load.image("Gbutton", "./assets/gogangle.png");
-    this.load.image('sky', sky)
-    this.load.image('bomb', bomb)
-    this.load.audio('thud', [thudMp3, thudOgg])
   }
 
   create () {
     this.scene.start('PlayScene')
   }
+  goFullScreen() {
+    this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+    if (this.game.scale.isFullScreen) {
+        this.game.scale.stopFullScreen();
+    } else { this.game.scale.startFullScreen(); }
+}
 }
