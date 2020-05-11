@@ -1,28 +1,14 @@
 <template>
   <div>
-    <Game/>
-    <Gangle/>
-    <Ranking/>
+    <router-view />
   </div>
 </template>
 
 
 <script>
-import Game from '@/components/Game'
-import Gangle from '@/views/Gangle'
-import Ranking from '@/views/Ranking'
+
 export default {
   name: 'App',
-  components: { 
-    Game,
-    Gangle,
-    Ranking 
-  },
-  data(){
-    return{
-      a:0
-    }
-  }
 }
 </script>
 
