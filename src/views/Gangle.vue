@@ -12,7 +12,7 @@
         </div>
         <div class="searchbox">
             <input id="search" type="text" placeholder="Input your name" />
-            <button id="abutton" onclick="cusername()">검색</button>
+            <button id="abutton" @click="toGame()">검색</button>
         </div>
     </div>
     </div>
@@ -20,7 +20,11 @@
 
 <script>
 export default {
-
+    methods: {
+        toGame() {
+            this.$router.push("game");
+        }
+    }
 }
 </script>
 

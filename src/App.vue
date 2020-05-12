@@ -14,12 +14,17 @@ export default {
 
 
 <style lang="scss">
-body {
-  height: 100vh;
+*{
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  background-color: black;
+  
+}
+body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  background-color: black;
+  height: 100vh;
 }
 </style>
