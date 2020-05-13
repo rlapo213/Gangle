@@ -2,13 +2,13 @@
 <div>
   <div id="one">
         <div class="layout">
-            <div class="blinking" id="blue">G</div>
-            <div class="blinking" id="red">a</div>
-            <div class="blinking" id="yellow">n</div>
-            <div class="blinking" id="blue">g</div>
-            <div class="blinking" id="green">l</div>
-            <div class="blinking" id="red">e</div>
-            <div class="blinking" id="mark">&copy;</div>
+            <div class="blink" id="blue" v-bind:class="{'blinking': isActive}">G</div>
+            <div class="blink" id="red" v-bind:class="{'blinking': isActive}">a</div>
+            <div class="blink" id="yellow" v-bind:class="{'blinking': isActive}">n</div>
+            <div class="blink" id="blue" v-bind:class="{'blinking': isActive}">g</div>
+            <div class="blink" id="green" v-bind:class="{'blinking': isActive}">l</div>
+            <div class="blink" id="red" v-bind:class="{'blinking': isActive}">e</div>
+            <div class="blink" id="mark" v-bind:class="{'blinking': isActive}">&copy;</div>
         </div>
         <div class="searchbox">
             <input id="search" type="text" placeholder="Input your name" />
@@ -20,10 +20,18 @@
 
 <script>
 export default {
+    data(){
+        return{
+                isActive : false
+        }
+    },
     methods: {
         toGame() {
-            this.$router.push("game");
-        }
+            this.isActive=true
+            this.$router.push('game')
+        },
+    },
+    computed:{
     }
 }
 </script>
@@ -89,12 +97,11 @@ export default {
         }
 
 
-        .blinking {
+        .blinking{
             -webkit-animation: blink 1.1s ease-in-out 1;
             -moz-animation: blink 1.1s ease-in-out 1;
             animation: blink 1.1s ease-in-out 1;
-            display: flex;
-            align-items: flex-end;
+            
         }
 
         @-webkit-keyframes blink {
@@ -180,6 +187,7 @@ export default {
             flex-direction: row;
             justify-content: center;
             font-size: 8em;
+            align-items: flex-end;
         }
 
         .searchbox {
