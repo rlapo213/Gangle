@@ -28,7 +28,10 @@ export default {
     methods: {
         toGame() {
             this.isActive=true
-            this.$router.push('game')
+            setTimeout(()=>{
+                this.$router.push('game')
+            },1200)
+            
         },
     },
     computed:{
@@ -98,9 +101,9 @@ export default {
 
 
         .blinking{
-            -webkit-animation: blink 1.1s ease-in-out 1;
-            -moz-animation: blink 1.1s ease-in-out 1;
-            animation: blink 1.1s ease-in-out 1;
+            -webkit-animation: blink 1.2s ease-in-out 10; /* 1 */
+            -moz-animation: blink 1.2s ease-in-out 10; /* 1 */
+            animation: blink 1.2s ease-in-out 10; /* 1 */
             
         }
 
