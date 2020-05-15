@@ -18,13 +18,13 @@ export default {
   margin: 0;
   box-sizing: border-box;
   user-select: none;
-  background-color: black;
-  
+  background-color: white;
 }
 body{
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
+  top:100px;
   height: 100vh;
 }
 </style>

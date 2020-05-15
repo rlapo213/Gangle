@@ -11,9 +11,10 @@
             <div class="blink" id="mark" v-bind:class="{'blinking': isActive}">&copy;</div>
         </div>
         <div class="searchbox">
-            <input id="search" type="text" placeholder="Input your name" />
-            <button id="abutton" @click="toGame()">검색</button>
+            <input id="search" type="text" v-on:keyup.enter="toGame()" placeholder="Input your name" />
+            <div class="b">Press Enter</div>
         </div>
+        
     </div>
     </div>
 </template>
@@ -33,7 +34,7 @@ export default {
             },1200)
             
         },
-    },
+    }, 
     computed:{
     }
 }
@@ -44,16 +45,6 @@ export default {
             user-select: none;
         }
 
-        .placeholder{
-            font-family: "Noto Sans", sans-serif;
-            text-align: center;
-            
-            margin-top: 4% !important;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
 
         div {
             color: rgb(138, 141, 146);
@@ -61,22 +52,22 @@ export default {
 
         #red {
             color: rgb(234, 067, 053);
-
+            letter-spacing: -5px;
         }
 
         #blue {
             color: rgb(066, 133, 244);
-
+            letter-spacing: -5px;
         }
 
         #yellow {
             color: rgb(251, 188, 005);
-
+            letter-spacing: -5px;
         }
 
         #green {
             color: rgb(052, 168, 083);
-
+            letter-spacing: -5px;
         }
 
         /* 검색바 */
@@ -85,7 +76,7 @@ export default {
             width: 320px;
             height: 20px;
             margin-right: 2%;
-
+            background: #ffffff;
         }
 
         button {
@@ -101,9 +92,9 @@ export default {
 
 
         .blinking{
-            -webkit-animation: blink 1.2s ease-in-out 10; /* 1 */
-            -moz-animation: blink 1.2s ease-in-out 10; /* 1 */
-            animation: blink 1.2s ease-in-out 10; /* 1 */
+            -webkit-animation: blink 1.2s ease-in-out infinite alternate; /* 1 */
+            -moz-animation: blink 1.2s ease-in-out infinite alternate; /* 1 */
+            animation: blink 1.2s ease-in-out infinite alternate; /* 1 */
             
         }
 
@@ -191,15 +182,39 @@ export default {
             justify-content: center;
             font-size: 8em;
             align-items: flex-end;
+            letter-spacing: -2px;
         }
 
         .searchbox {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
 
         #mark {
             font-size: 0.2em;
         }
+
+
+        .b{
+	-webkit-animation:blinka 0.7s ease-in-out infinite alternate;
+    -moz-animation:blinka 0.7s ease-in-out infinite alternate;
+    animation:blinka 0.7s ease-in-out infinite alternate;
+    font-size: 20px;
+}
+@-webkit-keyframes blinka{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blinka{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blinka{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+        
 </style>
