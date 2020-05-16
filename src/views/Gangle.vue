@@ -11,8 +11,8 @@
             <div class="blink" id="mark" v-bind:class="{'blinking': isActive}">&copy;</div>
         </div>
         <div class="searchbox">
-            <input id="search" type="text" v-on:keyup.enter="toGame()" placeholder="Input your name" />
-            <div class="b">Press Enter</div>
+            <input id="searchbar" type="text" v-on:keyup.enter="toGame()" placeholder="Input your name" />
+            <div class="b" @click="toGame()">Press Enter</div>
         </div>
         
     </div>
@@ -71,23 +71,20 @@ export default {
         }
 
         /* 검색바 */
-        #search {
-            margin-top: 6%;
-            width: 320px;
-            height: 20px;
+        #searchbar {
+            margin-top: 8%;
+            width: 550px;
+            height: 40px;
             margin-right: 2%;
             background: #ffffff;
-        }
-
-        button {
-            width: 50px;
-            height: 100%;
-            margin-top: 6%;
-            background: #ffffff;
-            outline: none;
-            float: right;
-            color: black;
-            cursor: pointer;
+            border-radius: 22px;
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+            border: black;
+            font-family: 'Segoe UI', 'Roboto', arial, sans-serif;  
+            cursor: pointer; 
+            display: flex;
+            padding-inline-start: 50px;
+            font-size: 20px;
         }
 
 
@@ -180,9 +177,12 @@ export default {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            font-size: 8em;
+            font-size: 6em;
             align-items: flex-end;
             letter-spacing: -2px;
+            font-weight:550;
+            font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
+            height: 300px;
         }
 
         .searchbox {
@@ -190,6 +190,7 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
         }
 
         #mark {
@@ -202,6 +203,8 @@ export default {
     -moz-animation:blinka 0.7s ease-in-out infinite alternate;
     animation:blinka 0.7s ease-in-out infinite alternate;
     font-size: 20px;
+    margin-top: 50px;
+    cursor: pointer;
 }
 @-webkit-keyframes blinka{
     0% {opacity:0;}
@@ -215,6 +218,7 @@ export default {
     0% {opacity:0;}
     100% {opacity:1;}
 }
+
 
         
 </style>

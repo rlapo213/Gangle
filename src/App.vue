@@ -23,8 +23,6 @@ export default {
 body{
   display: flex;
   justify-content: center;
-  position: relative;
-  top:100px;
   height: 100vh;
 }
 </style>
