@@ -76,15 +76,17 @@ export default {
             width: 550px;
             height: 40px;
             margin-right: 2%;
-            background: #ffffff;
             border-radius: 22px;
             box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+            text-shadow: none;
             border: black;
             font-family: 'Segoe UI', 'Roboto', arial, sans-serif;  
-            cursor: pointer; 
+            cursor: text;
             display: flex;
             padding-inline-start: 50px;
             font-size: 20px;
+            background-color: -internal-light-dark-color(white, black);
+            outline: none;
         }
 
 
