@@ -11,7 +11,7 @@
             <div class="blink" id="mark" v-bind:class="{'blinking': isActive}">&copy;</div>
         </div>
         <div class="searchbox">
-            <input id="searchbar" type="text" v-on:keyup.enter="toGame()" placeholder="Input your name" />
+            <input id="searchbar" type="text" autocomplete="off" v-on:keyup.enter="toGame()" placeholder="Input your name" />
             <div class="b" @click="toGame()">Press Enter</div>
         </div>
         
@@ -87,6 +87,7 @@ export default {
             font-size: 20px;
             background-color: -internal-light-dark-color(white, black);
             outline: none;
+            
         }
 
 
