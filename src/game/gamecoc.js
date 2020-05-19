@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 import BootScene from './Boot'
 import PlayScene from './Play'
 
-//Gangle.vue -> Boot.js -> Play.js -> DeadSecne.vue -> Ranking.vue
+//Gangle.vue -> Boot.js -> Play.js -> Ranking.vue
 
 
 function launch(containerId) {

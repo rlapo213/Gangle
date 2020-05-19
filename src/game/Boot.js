@@ -21,14 +21,14 @@ export default class BootScene extends Scene {
     this.load.audio("bgm", "./assets/SEIS_LAVEY.wav");
     this.load.image("Gbutton", "./assets/gogangle.png");
   }
-
-  create () {
-    this.scene.start('PlayScene')
-  }
   goFullScreen() {
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
     if (this.game.scale.isFullScreen) {
         this.game.scale.stopFullScreen();
     } else { this.game.scale.startFullScreen(); }
 }
+  create () {
+    this.scene.start('PlayScene')
+  }
+ 
 }
