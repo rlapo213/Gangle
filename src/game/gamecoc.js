@@ -2,8 +2,9 @@ import Phaser from 'phaser'
 import BootScene from './Boot'
 import PlayScene from './Play'
 
-//Gangle.vue -> Boot.js -> Play.js -> Ranking.vue
-
+//Gangle.vue -> Game.vue (Boot.js -> Play.js -> End.js) -> Ranking.vue
+//Gangle.vue -> Game.vue (Boot.js -> Play.js) -> Ranking.vue
+//How to move from Game.vue to Ranking.vue? plzplzplzplzplzzzz
 
 function launch(containerId) {
     return new Phaser.Game({
