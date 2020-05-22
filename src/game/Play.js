@@ -7,7 +7,10 @@ export default class PlayScene extends Scene {
   }
 
   create () {
-    this.add.spritesheet(400, 300, 'sky')
+    this.add.image(400, 300, 'sky')
+    this.add.image(400, 300, 'ground')
+    this.add.image(100, 100, 'bg1')
+    // this.add.sprite(60,76,'player')
 
     const bomb = this.physics.add.image(400, 200, 'bomb')
     bomb.setCollideWorldBounds(true)

@@ -4,7 +4,7 @@ import PlayScene from './Play'
 
 //Gangle.vue -> Game.vue (Boot.js -> Play.js -> End.js) -> Ranking.vue
 //Gangle.vue -> Game.vue (Boot.js -> Play.js) -> Ranking.vue
-//How to move a data from Game.vue to Ranking.vue? 
+//How to move a data from Game.vue to Ranking.vue? -> Use api server.
 
 function launch(containerId) {
     return new Phaser.Game({
