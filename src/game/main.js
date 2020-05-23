@@ -1,5 +1,3 @@
-import { Scene } from 'phaser'
-
 var Main = {
     preload: function () {
         game.load.spritesheet("JUMP", "./assets/JUMP.png", 128, 256);

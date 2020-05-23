@@ -9,14 +9,14 @@ import PlayScene from './Play'
 function launch(containerId) {
     return new Phaser.Game({
       type: Phaser.AUTO,
-      width: 800,
-      height: 600,
+      width: 1200,
+      height: 675,
       parent: containerId,
       physics: {
         default: 'arcade',
         arcade: {
           gravity: {
-             y: 300 
+             y: 800
             },
           debug: false
         }
