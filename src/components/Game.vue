@@ -15,7 +15,7 @@ export default {
       gameInstance: null,
       containerId: 'game-container'
     }
-  },
+  },  
   async mounted() {
     const game = await import(/* webpackChunkName: "game" */ '@/game/gamec')
     this.downloaded = true
